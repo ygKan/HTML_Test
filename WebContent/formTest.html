@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form标签的练习</title>
+</head>
+<body>
+ <table align="center" width="500" border="0">
+   <caption align="center">学生基本信息</caption>
+   <form action="save.php" method="post">
+   <tr>        <!-- 使用输入域名字输入框 -->
+      <th>用户名：</th>
+      <td><input type="text" name="username" value=""/></td>
+   </tr>
+   <tr>       <!-- 使用单选按钮域性别输入 -->
+      <th>性别：</th>
+      <td>
+        <label>男</label>
+        <input type="radio" name="sex" value="male"/ checked>
+        <label>女</label>
+        <input type="radio" name="sex" value="female"/>
+        <label>保密</label>
+        <input type="radio" name="sex" value="secret"/>
+      </td>
+    </tr>
+    <tr>          <!-- 使用下拉列表域定义学历 -->
+       <th>学历：</th>
+       <td>
+        <select>
+        <option>----请选择----</option>
+        <option value="1">高中</option>
+        <option value="2">大专</option>
+        <option value="3">本科</option>
+        <option value="4">研究生</option>
+        <option value="5">其他</option>
+      </select>
+      </td>
+    </tr>
+    <tr>           <!-- 使用复选框定义所选课程 -->
+     <th>课程：</th>
+     <td>
+      <input type="checkbox" name="course1">日语
+      <input type="checkbox" name="course2">英语
+      <input type="checkbox" name="course3">韩语
+      <input type="checkbox" name="course4">Java
+      <input type="checkbox" name="course5">PHP
+      <input type="checkbox" name="course6">MYSQL
+     </td>
+    </tr>
+    <tr>         <!-- 使用多行文本输入定义自我评价输入 -->
+      <th>自我评价：</th>
+      <td><textarea rows="5" cols="50"></textarea></td>
+    </tr>
+    <tr>         <!-- 定义提交和重置按钮 -->
+       <td colspan="4" align="center">
+         <input type="submit" name="submit" value="提交">
+         <input type="reset"  name="reset"  value="重置">
+       </td>
+    </tr>
+   </form>
+ </table>
+</body>
+</html>
